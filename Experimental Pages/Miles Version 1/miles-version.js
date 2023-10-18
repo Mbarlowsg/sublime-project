@@ -1,9 +1,8 @@
 /** @format */
-let secondCount = 0;
-let minuteCount = 0
-let hourCount = 0;
+let count = 0;
 // Rate of count increase in ms
-let deathRate;
+let deathRate = 1000;
+let interval;
 
 
 window.onload = () => {
@@ -40,26 +39,21 @@ function clearCount() {
 //     setInterval(increaseCount, 555);
 // }
 function refreshCount() {
-function secondRate() {
-	secondCount++;
-	document.getElementById("secondCount").innerText = `Seconds: ${count}`;
-	increaseCount();
-}
-function minuteRate() {
-	count = count * 60;
-	document.getElementById("minuteCount").innerText = `Minutes: ${count * 60}`;
-	increaseCount();
-}
-function hourRate() {
-	count = count * 3600;
-	document.getElementById("hourCount").innerText = `Hours: ${(count * 3600)}`;
-	increaseCount();
-}
-	setInterval(increaseCount, 555);
+	document.getElementById("secondCount").innerText = `Second: ${Math.round(count)}`;
+	document.getElementById("minuteCount").innerText = `Minute: ${Math.round(count * 60)}`;
+	document.getElementById("hourCount").innerText = `Hour: ${(Math.round(count * 3600))}`;
+	document.getElementById("dayCount").innerText = `Day: ${(Math.round(count * 24 * 3600))}`;
+	document.getElementById("yearCount").innerText = `Year: ${(Math.round(count * 365 * 24 * 3600))}`;
+	if (interval !== null) {
+		clearInterval(interval);
+		interval = setInterval(increaseCount, deathRate);
+	} else {
+		interval = setInterval(increaseCount(), deathRate);
+	}
 }
 
 function increaseCount() {
-	count++;
+	count = count + 1.8;
 	console.log(count);
 	refreshCount();
 }
