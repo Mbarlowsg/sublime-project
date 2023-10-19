@@ -1,7 +1,7 @@
 /** @format */
 let count = 0;
 // Rate of count increase in ms
-let deathRate = 1000;
+let deathRate = 500;
 let interval;
 
 
@@ -53,7 +53,7 @@ function refreshCount() {
 }
 
 function increaseCount() {
-	count = count + 1.8;
+	count = count + (1.8/2);
 	console.log(count);
 	refreshCount();
 }
