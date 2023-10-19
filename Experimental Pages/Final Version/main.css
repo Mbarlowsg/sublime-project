@@ -1,0 +1,12 @@
+/** @format */
+
+body {
+	display: grid;
+	justify-content: center;
+	text-align: center;
+	background-color: black;
+}
+
+h1 {
+	color: white;
+}
