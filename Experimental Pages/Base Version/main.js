@@ -5,7 +5,7 @@ let deathRate = 555;
 let interval;
 
 window.onload = () => {
-	setRate("hour");
+	setRate("second");
 };
 
 function clearCount() {

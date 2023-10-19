@@ -1,5 +1,5 @@
 /** @format */
-let count = "000000000" + "1";
+let count = 0;
 // Rate of count increase in ms
 let deathRate = 555;
 let interval;
