@@ -10,3 +10,7 @@ body {
 h1 {
 	color: white;
 }
+
+.fade-in-text {
+	animation: fadeIn 5s;
+}
