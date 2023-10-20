@@ -7,7 +7,7 @@ let interval;
 window.onload = () => {
 	setInterval(increaseCount, 555);
 	setTimeout(fadeInMessageOne, 7000);
-	setTimeout(fadeInMessageTwo, 12000);
+	setTimeout(fadeInMessageTwo, 15000);
 };
 
 function increaseCount() {

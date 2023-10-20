@@ -28,7 +28,8 @@ h1 {
 }
 
 .fade-in-text {
-	animation: fadeIn 2s;
+	/* animation: fadeIn 2s; */
+	opacity: 1;
 }
 
 .hide-text {
